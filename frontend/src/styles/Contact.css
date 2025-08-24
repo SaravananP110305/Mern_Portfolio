@@ -1,0 +1,145 @@
+.contact-container {
+  padding: 5rem 2rem 4rem;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-container h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #64ffda;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Form styles */
+.contact-form {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #112240;
+  border: none;
+  border-bottom: 2px solid #64ffda;
+  padding: 0.75rem 0.5rem;
+  color: #ccd6f6;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8892b0;
+  font-weight: 400;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #0ef;
+  color: #64ffda;
+}
+
+.primary-btn {
+  width: max-content;
+  background-color: transparent;
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
+.primary-btn:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+}
+
+/* Right-side map only */
+.contact-location {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.contact-location iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-content {
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .contact-form,
+  .contact-location {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-form,
+  .contact-location {
+    max-width: 100%;
+    flex: 1 1 100%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 3rem 1rem 3rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .primary-btn {
+    padding: 0.6rem 1.5rem;
+  }
+}
